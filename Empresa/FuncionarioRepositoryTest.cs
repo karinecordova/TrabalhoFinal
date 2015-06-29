@@ -112,7 +112,7 @@ namespace Empresa
             var updatedFuncionario = repository.Update(funcionario);
 
             //Assert
-            IFuncionarioRepository repository2 = new FuncionarioRepository();
+         //   IFuncionarioRepository repository2 = new FuncionarioRepository();
             var persistedFuncionario = _contextForTest.Funcionarios.Find(2);
             Assert.IsNotNull(updatedFuncionario);
             Assert.AreEqual(updatedFuncionario.Id, persistedFuncionario.Id);
@@ -148,20 +148,8 @@ namespace Empresa
           //  persistedFuncionario.Should().BeNull();
         }
 
-        [TestMethod]
-        public void RetrieveFuncionarioByNameRepositoryTest()
-        {
-            //Arrange
-            IFuncionarioRepository repository = new FuncionarioRepository();
-
-            //Action
-            var funcionarios = repository.GetById(1);
-
-            //Assert
-            Assert.IsNotNull(funcionarios);
-            Assert.IsTrue(funcionarios.Count == 1);
-        }
-
+       
+         
         [TestMethod]
         public void RetrieveAllFuncionariosRepositoryTest()
         {
