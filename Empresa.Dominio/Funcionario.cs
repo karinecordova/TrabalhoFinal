@@ -32,7 +32,7 @@ namespace Empresa.Dominio
             if (string.IsNullOrEmpty(Nome))
                 throw new Exception("Nome Inválido");
             if (string.IsNullOrEmpty(Funcao))
-                throw new Exception("Autor Inválido");
+                throw new Exception("Funcao Inválido");
             if (string.IsNullOrEmpty(Cpf))
             {
                 int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

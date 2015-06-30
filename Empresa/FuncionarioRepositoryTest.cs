@@ -101,7 +101,7 @@ namespace Empresa
         {
             //Arrange
             IFuncionarioRepository repository = new FuncionarioRepository();
-            Funcionario funcionario = _contextForTest.Funcionarios.Find(2);
+            Funcionario funcionario = _contextForTest.Funcionarios.Find(1);
             funcionario.Nome = "Teste";
             funcionario.DataAdmissao = DateTime.Now;
             funcionario.DataNascimento = new DateTime(1995, 06, 01, 0, 0, 0);
@@ -113,7 +113,7 @@ namespace Empresa
 
             //Assert
          //   IFuncionarioRepository repository2 = new FuncionarioRepository();
-            var persistedFuncionario = _contextForTest.Funcionarios.Find(2);
+            var persistedFuncionario = _contextForTest.Funcionarios.Find(1);
             Assert.IsNotNull(updatedFuncionario);
             Assert.AreEqual(updatedFuncionario.Id, persistedFuncionario.Id);
             Assert.AreEqual(updatedFuncionario.Nome, persistedFuncionario.Nome);
